@@ -30,5 +30,6 @@ if(st.button("Perform NER")):
     if(pagename != ""):
         data = nlp(getsummary(pagename))
         html =spacy.displacy.render(data,style="ent")
+        html = html.replace("\n\n","\n")
         st.write(html,unsafe_allow_html=True)
 

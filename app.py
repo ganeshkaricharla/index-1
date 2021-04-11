@@ -1,4 +1,4 @@
-import wikipediaapi as wiki
+import wikipediaapi
 import streamlit as st
 import spacy
 

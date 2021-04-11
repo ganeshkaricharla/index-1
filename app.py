@@ -2,16 +2,12 @@ import wikipediaapi as wiki
 import streamlit as st
 import spacy
 
+st.set_page_config(layout='wide')
 
+st.title("Named Entity Recognition")
 pagename = st.text_input("Enter The page Name")
 
 nlp = spacy.load("en_core_web_sm")
-
-if(st.button("Perform NER")):
-    if(pagename != ""):
-        data = nlp(getsummary(pagename))
-        html =spacy.displacy.render(data,style="ent")
-        st.write(html,unsafe_allow_html=True)
 
 
 
@@ -30,4 +26,9 @@ def getsummary(pageName):
 
 
 
+if(st.button("Perform NER")):
+    if(pagename != ""):
+        data = nlp(getsummary(pagename))
+        html =spacy.displacy.render(data,style="ent")
+        st.write(html,unsafe_allow_html=True)
 

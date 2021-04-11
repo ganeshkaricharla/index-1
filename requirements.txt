@@ -1,0 +1,4 @@
+Wikipedia-API==0.5.4
+streamlit==0.80.0
+spacy
+spacy "en_core_web_sm"
